@@ -1,0 +1,7 @@
+/.idea/
+/build/
+.gradle/
+app/app.iml
+#crash.txt
+ExampleApplication.iml
+local.properties

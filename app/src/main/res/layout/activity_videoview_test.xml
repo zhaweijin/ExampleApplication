@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.example.Database.DatabaseActivityTest">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.Video.RecommentVideoView
+            android:id="@+id/video_test1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <TextView
+            android:text="2323232"
+            android:layout_width="50dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:text="2323232"
+            android:layout_width="50dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:text="2323232"
+            android:layout_width="50dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:text="2323232"
+            android:layout_width="50dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:text="2323232"
+
+            android:layout_width="50dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:text="2323232"
+            android:layout_width="50dp"
+            android:layout_height="100dp" />
+        <TextView
+            android:text="2323232"
+            android:layout_width="50dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:text="2323232"
+            android:layout_width="50dp"
+            android:layout_height="100dp" />
+        <TextView
+            android:text="2323232"
+            android:layout_width="50dp"
+            android:layout_height="100dp" />
+        <TextView
+            android:text="2323232"
+            android:layout_width="50dp"
+            android:layout_height="100dp" />
+    </LinearLayout>
+</ScrollView>

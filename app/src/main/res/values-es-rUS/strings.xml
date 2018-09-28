@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ExampleApplication</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="test">¡Error de red, por favor, verifique la conexión de red!</string>
+</resources>

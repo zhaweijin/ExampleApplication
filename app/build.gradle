@@ -1,0 +1,146 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'bugly'
+
+bugly {
+    appId = '4e49840392'
+    appKey = 'dcc5cbe8-e071-462c-9151-7582a2b103d6'
+}
+
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+
+
+
+    defaultConfig {
+        applicationId "com.example.carter"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    //----------
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    //-----------
+}
+
+retrolambda {
+    javaVersion JavaVersion.VERSION_1_7
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //test unit
+    testCompile 'junit:junit:4.12'
+    //android
+    //compile 'com.android.support:appcompat-v7:25.0.0'
+    //rxjava
+    compile 'io.reactivex:rxandroid:1.2.0'
+    compile 'io.reactivex:rxjava:1.1.4'
+    //tencent crash report
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+    //bind view
+    compile 'com.jakewharton:butterknife:8.1.0'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+    //use method
+    //system build.gradle add>>classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    //app build.gradle top add >>apply plugin: 'android-apt'
+    //retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    //Retrofit2所需要的包
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    //ConverterFactory的Gson依赖包
+    compile 'com.squareup.retrofit2:converter-scalars:2.0.0-beta4'
+    //ConverterFactory的String依赖包
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    //rxjava 依赖包
+    //okhttp  替换retrofit内部的okhttp
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+    compile 'com.squareup.okio:okio:1.7.0'
+    //facebook chrome 调试工具　打开Chrome，在地址栏输入chrome://inspect/
+    compile 'com.facebook.stetho:stetho:1.3.1'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
+    //fresco静态图片加载库
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    //fresco 动态gif 图标加载库
+    compile 'com.facebook.fresco:animated-base-support:0.12.0'
+    compile 'com.facebook.fresco:animated-gif:0.12.0'
+    //支持 WebP （静态图+动图），需要添加 云转换https://cloudconvert.com/png-to-webp
+    compile 'com.facebook.fresco:animated-webp:0.12.0'
+    compile 'com.facebook.fresco:webpsupport:0.12.0'
+    //android activeandroid 数据库 system.build.grade也需要配置
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    //stream java 8 lambda
+    compile 'com.annimon:stream:1.0.3'
+    //Rxview** bind view
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-support-v4:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-design:0.4.0'
+    //recycleview card view
+    compile 'com.android.support:cardview-v7:25.0.0'
+    compile files('libs/hiveview_errorcode.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+    compile files('libs/commons-httpclient-3.0.jar')
+    provided files('libs/hiveviewcore_20170626.jar')
+
+    compile 'com.alipay.euler:andfix:0.5.0@aar'
+    compile files('libs/hiveview_eth_manager_905.jar')
+
+
+    //logger　output
+    compile 'com.orhanobut:logger:1.3'
+
+    //ormlite 数据库
+    compile 'com.j256.ormlite:ormlite-android:5.0'
+    compile 'com.j256.ormlite:ormlite-core:5.0'
+
+
+    //微信登录
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+
+
+    //glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    // GPUImage
+    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.3.0'
+
+
+    //exceed 64k method
+    compile 'com.android.support:multidex:1.0.0'
+
+
+    //(1)activity+(n)fragement
+    compile 'me.yokeyword:fragmentation:1.1.9'
+    compile 'me.yokeyword:fragmentation-swipeback:1.1.9'
+
+
+    //fast recyclview adapter
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+
+    /**
+     * 网页登录http://172.16.8.237:8080/#  调试模式查看数据库等文件
+     */
+    debugCompile 'com.amitshekhar.android:debug-db:1.0.0'
+}

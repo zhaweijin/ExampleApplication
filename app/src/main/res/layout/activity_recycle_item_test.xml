@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.MyGridview.FocusRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/focus_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="true"
+    android:focusable="true"
+    android:background="@drawable/gridview_selector"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="233dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:alpha="0.2"
+            android:layout_width="match_parent"
+            android:layout_height="167dp"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/holo_blue_dark"
+              />
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/layout_textview"
+            android:background="@android:color/darker_gray"
+            android:layout_height="67dp">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="bbb"
+                android:textStyle="bold"
+                android:alpha="0.5"
+                android:textColor="@color/text_selected_color"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="99RMB"
+                android:alpha="0.5"
+                android:textStyle="bold"
+                android:textColor="@color/text_selected_color"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</com.example.MyGridview.FocusRelativeLayout>
+
+

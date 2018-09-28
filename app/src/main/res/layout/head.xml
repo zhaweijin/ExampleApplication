@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.example.Database.DatabaseActivityTest">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:layout_marginLeft="100dp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/card_selector"
+            android:text="Hello1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:layout_marginLeft="100dp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/card_selector"
+            android:text="Hello2"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:layout_marginLeft="100dp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/card_selector"
+            android:text="Hello3"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

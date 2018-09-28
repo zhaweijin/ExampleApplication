@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_margin="50dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:id="@+id/scroolview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.view.ScaleGridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:descendantFocusability="afterDescendants"
+            android:drawSelectorOnTop="false"
+            android:fadingEdge="none"
+            android:horizontalSpacing="20dp"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:transcriptMode="normal"
+            android:verticalSpacing="20dp">
+        </com.example.view.ScaleGridView>
+    </ScrollView>
+</LinearLayout>

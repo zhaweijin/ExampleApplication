@@ -1,0 +1,1 @@
+//ALTER TABLE carter ADD COLUMN sex SUBSTRING;
