@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.BindView.BindViewTest;
 import com.example.BugReportTest.BugTest;
+import com.example.profilerMemoryTest.RxLifecycleComponentsActivity;
 import com.example.view.FileTitleTextView;
 import com.example.view.MarqueeText;
 
@@ -135,6 +136,7 @@ public class MainActivity extends BaseActivity {
         //CountTimerTest.launch(this);
         //finish();
 
+        RxLifecycleComponentsActivity.launch(this);
 
 //        FilpperTest.launch(this);
 

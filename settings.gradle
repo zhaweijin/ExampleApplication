@@ -1,1 +1,1 @@
-include ':app',':MyTest', ':HiveviewGuide'
+include ':app',':MyTest', ':HiveviewGuide', ':carterlibrary', ':alibrary'
