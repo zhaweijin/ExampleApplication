@@ -36,8 +36,9 @@ public class PageTest extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewpager_test);
 
-        /*pager = (ViewPager)findViewById(R.id.view_pager);
-        pager.setRotation(-90f);
+        pager = (ViewPager)findViewById(R.id.view_pager);
+        pager.setVisibility(View.VISIBLE);
+        //pager.setRotation(-90f);
         views = new ArrayList<View>();
 
         LayoutInflater mLi = LayoutInflater.from(this);
@@ -49,11 +50,11 @@ public class PageTest extends Activity{
         views.add(view1);
 
         MyPagerAdapter adapter = new MyPagerAdapter();
-        pager.setAdapter(adapter);*/
+        pager.setAdapter(adapter);
 
 
 
-        VerticalViewPager verticalViewPager = (VerticalViewPager) findViewById(R.id.view_pager2);
+       /* VerticalViewPager verticalViewPager = (VerticalViewPager) findViewById(R.id.view_pager2);
 
         views = new ArrayList<View>();
 
@@ -66,7 +67,7 @@ public class PageTest extends Activity{
         views.add(view1);
 
         VerticalAdapter adapter = new VerticalAdapter(views);
-        verticalViewPager.setAdapter(adapter);
+        verticalViewPager.setAdapter(adapter);*/
     }
 
 

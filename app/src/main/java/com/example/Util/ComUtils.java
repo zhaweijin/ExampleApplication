@@ -14,6 +14,8 @@ import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
+import android.os.SystemClock;
+import android.text.format.Formatter;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
@@ -258,7 +260,7 @@ public class ComUtils {
      * @param strFilePath
      * @return
      */
-    public String getStringFormFile(String strFilePath) {
+    public static String getStringFormFile(String strFilePath) {
         String path = strFilePath;
         String content = "";
         File file = new File(path);
@@ -1152,6 +1154,80 @@ public class ComUtils {
         // 返回判断信息
         return false;
     }
+
+
+    /**
+     * long size 转化为实体大小
+     * @param mContext
+     * @param size
+     * @return
+     */
+    public static String getSizeStr(Context mContext,long size) {
+        if (size >= 0) {
+            return Formatter.formatFileSize(mContext, size);
+        }
+        return null;
+    }
+
+
+    /**
+     * 拉起第三方app activity
+     * @param activity
+     * @param packageName
+     * @param activityName
+     */
+    public static void startAppFromName(Activity activity,String packageName, String activityName){
+        Intent mIntent = new Intent();
+        //mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); //添加这个之后，调用startActivityForResult()无效
+        ComponentName comp = new ComponentName(packageName,activityName);
+        mIntent.setComponent(comp);
+        activity.startActivityForResult(mIntent,3);
+    }
+
+
+
+    private static long exitTime = 0;
+
+    /**
+     * 连续点击2次退出
+     */
+    public static void exitAfterTwice(Context context) {
+        if ((System.currentTimeMillis() - exitTime) > 2000) {
+            Toast.makeText(context, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+            exitTime = System.currentTimeMillis();
+        } else {
+            System.exit(0);
+        }
+    }
+
+
+    final static int COUNTS = 5;//点击次数
+    final static long DURATION = 3 * 1000;//规定有效时间
+    static long[] mHits = new long[COUNTS];
+    /**
+     * 连续点击多次退出
+     */
+    public static void exitAfterMany(Context context) {
+        /**
+         * 实现多击方法
+         * src 拷贝的源数组
+         * srcPos 从源数组的那个位置开始拷贝.
+         * dst 目标数组
+         * dstPos 从目标数组的那个位子开始写数据
+         * length 拷贝的元素的个数
+         */
+        System.arraycopy(mHits, 1, mHits, 0, mHits.length - 1);
+        //实现左移，然后最后一个位置更新距离开机的时间，如果最后一个时间和最开始时间小于DURATION，即连续5次点击
+        mHits[mHits.length - 1] = SystemClock.uptimeMillis();//System.currentTimeMillis()
+
+        if ((mHits[mHits.length - 1] - mHits[0] <= DURATION)) {
+            String tips = "您已在[" + DURATION + "]ms内连续点击【" + mHits.length + "】次了！！！";
+            Toast.makeText(context, tips, Toast.LENGTH_SHORT).show();
+            System.exit(0);
+        }
+    }
+
+
 }
 
 

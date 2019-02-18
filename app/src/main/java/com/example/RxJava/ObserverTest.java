@@ -4,24 +4,31 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.Util.CarterLogger;
+import com.example.Util.ComUtils;
 import com.example.carter.BaseActivity;
 import com.example.carter.R;
 import com.jakewharton.rxbinding.view.RxView;
 
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
 import rx.Observable;
 import rx.Observer;
 import rx.Subscriber;
+import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action0;
 import rx.functions.Action1;
+import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**
@@ -46,7 +53,7 @@ public class ObserverTest extends BaseActivity {
         setContentView(R.layout.rxobserver_test_main);
 
 //        dataChange();
-        button_test(button);
+        //button_test(button);
 //        listview_test();
 
 /*        try {
@@ -59,6 +66,40 @@ public class ObserverTest extends BaseActivity {
 
     }
 
+
+
+    /**
+     * 加载数据
+     */
+    private void handle4GUpgrade() {
+        Observable.interval(5, TimeUnit.SECONDS)
+                .map(new Func1<Long, Integer>() {
+                    @Override
+                    public Integer call(Long aLong) {
+
+                        return 99;
+                    }
+                })
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<Integer>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(Integer number) {
+                        Log.v("test", "NUMBER==" + number);
+                    }
+                });
+
+
+    }
 
     /**
      * Scheduler线程切换
