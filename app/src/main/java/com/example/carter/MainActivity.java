@@ -17,7 +17,13 @@ import android.widget.TextView;
 import com.example.BindView.BindViewTest;
 import com.example.BugReportTest.BugTest;
 import com.example.RecycleView.RecycleViewTest;
+<<<<<<< HEAD
 import com.example.videoplay.VideoTest;
+=======
+import com.example.RxJava.ObserverTest;
+import com.example.ViewPaperTest.PageTest;
+import com.example.profilerMemoryTest.RxLifecycleComponentsActivity;
+>>>>>>> 19eddef0885302791d229e58ef19186195db036d
 import com.example.view.FileTitleTextView;
 import com.example.view.MarqueeText;
 
@@ -79,6 +85,9 @@ public class MainActivity extends BaseActivity {
         Log.v("test","sssssssssssss");
         //switchInputMethod(this,"com.baidu.input_baidutv/com.baidu.input_baidutv.ImeService");
 
+
+        //ObserverTest.launch(this);
+
         //ScaleGridActivity.launch(this);
         //finish();
 
@@ -117,7 +126,7 @@ public class MainActivity extends BaseActivity {
 //        MvpTest.launch(this);
 //        OneMulFragmentAcitvity.launch(this);
 //        DowloadTest.launch(this);
-       // ViewPagerActivity.launch(this);
+       RecycleViewTest.launch(this);
 
         //SqlTestActivity.launch(this);
         /*Intent intent = new Intent(this, TestIntentService.class);
@@ -137,7 +146,11 @@ public class MainActivity extends BaseActivity {
         //CountTimerTest.launch(this);
         //finish();
 
+<<<<<<< HEAD
         VideoTest.launch(this);
+=======
+        //RxLifecycleComponentsActivity.launch(this);
+>>>>>>> 19eddef0885302791d229e58ef19186195db036d
 
 //        FilpperTest.launch(this);
 

@@ -106,6 +106,7 @@
         <service android:name="com.example.RxJava.download.file.DownloadService"></service>
         <activity android:name="com.example.fragment.viewpage.ViewPagerActivity"></activity>
         <activity android:name="com.example.Video.VideoViewTest"></activity>
+        <activity android:name="com.example.profilerMemoryTest.RxLifecycleComponentsActivity"></activity>
     </application>
 
 </manifest>

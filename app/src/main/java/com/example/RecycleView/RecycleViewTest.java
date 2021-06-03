@@ -76,11 +76,11 @@ public class RecycleViewTest extends BaseActivity{
 
         Log.v("tt",">>>"+ Build.VERSION.SDK_INT);
 
-        test();
+        //test();
 
 //        fastAdapter();
         //initViewCard();
-//        initListView();
+        initListView();
 
         //initViewStaggerGrid();
     }
@@ -103,7 +103,8 @@ public class RecycleViewTest extends BaseActivity{
         /**
          * 设置纵向滚动，也可以设置横向滚动
          */
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this); //listview 垂直方向
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this); //listview 垂直方向
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         mRecyclerView.setLayoutManager(layoutManager);
         //构建一个临时数据源
         for (int i = 0; i < 220; i++) {

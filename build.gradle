@@ -4,7 +4,14 @@ buildscript {
     repositories {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         jcenter()
+<<<<<<< HEAD
         google()
+=======
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+>>>>>>> 19eddef0885302791d229e58ef19186195db036d
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.0'
@@ -24,7 +31,14 @@ allprojects {
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
 
         maven { url "https://jitpack.io" }
+<<<<<<< HEAD
         google()
+=======
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+>>>>>>> 19eddef0885302791d229e58ef19186195db036d
     }
 
 }
