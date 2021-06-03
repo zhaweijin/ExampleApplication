@@ -31,7 +31,7 @@ public class VideoTest extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_test);
 
-        video_view.setVideoURI(Uri.parse("/mnt/sdcard/start_home_1.2.mp4"));
+        video_view.setVideoURI(Uri.parse("http://testdcpimg.cloudp.cc/m3u8/shangguan01/20200427/1254705178217553922.mp4"));
         video_view.start();
     }
 }

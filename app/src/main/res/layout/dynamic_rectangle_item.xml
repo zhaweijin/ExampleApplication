@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.RecycleView.AppModuleFocusLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:focusable="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="253dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="180dp">
+        <RelativeLayout
+            android:id="@+id/focus_layout"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/item_focus">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="253dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@android:color/holo_blue_light"
+                  />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_marginTop="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="name"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+
+
+
+</com.example.RecycleView.AppModuleFocusLayout>
+
+
+

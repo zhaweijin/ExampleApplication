@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import com.example.BindView.BindViewTest;
 import com.example.BugReportTest.BugTest;
+import com.example.RecycleView.RecycleViewTest;
+import com.example.videoplay.VideoTest;
 import com.example.view.FileTitleTextView;
 import com.example.view.MarqueeText;
 
@@ -135,6 +137,7 @@ public class MainActivity extends BaseActivity {
         //CountTimerTest.launch(this);
         //finish();
 
+        VideoTest.launch(this);
 
 //        FilpperTest.launch(this);
 

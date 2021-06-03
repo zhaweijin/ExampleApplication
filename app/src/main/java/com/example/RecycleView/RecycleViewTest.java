@@ -10,6 +10,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
@@ -25,12 +26,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.example.Util.Constant;
 import com.example.carter.BaseActivity;
 import com.example.carter.R;
 import com.example.carter.RecycleAdapter;
 import com.example.carter.ScrollGridLayoutManager;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import butterknife.BindView;
@@ -113,6 +116,9 @@ public class RecycleViewTest extends BaseActivity{
         mRecyclerView.setAdapter(adapter);
 
     }
+
+
+
 
     /**
      * 网格滚动,模拟gridview
@@ -459,6 +465,8 @@ public class RecycleViewTest extends BaseActivity{
             }
         }
     }
+
+
 
 
     /**
